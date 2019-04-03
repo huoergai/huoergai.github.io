@@ -118,7 +118,7 @@ function searchFromKeyWord(keyword = ""){
 
             if(lowerTitle.indexOf(handleKeyword) !== -1 || lowerContent.indexOf(handleKeyword) !== -1){
                 let resultItem = {}
-                resultItem.title = title.replace(keyword, "<span class='red'>" + keyword + '</span>');
+                resultItem.title = title.replace(keyword, "<span class="red">" + keyword + '</span>');
                 resultItem.url = item.url;
 
                 resultItem.content = [];
@@ -129,11 +129,11 @@ function searchFromKeyWord(keyword = ""){
                     let begin = lowerContent.indexOf(handleKeyword) - sildeWindowSize / 2 < 0 ? 0 : lowerContent.indexOf(handleKeyword) - sildeWindowSize / 2
                     let end = begin + sildeWindowSize;
                     let reg = caseSensitive ?  new RegExp('('+keyword+')','g') :  new RegExp('('+keyword+')','ig')
-                    resultItem.content.push("..." + content.slice(lastend + begin, lastend + end).replace(reg, "<span class='red'>$1</span>") + "...")
+                    resultItem.content.push("..." + content.slice(lastend + begin, lastend + end).replace(reg, "<span class="red">$1</span>") + "...")
                     lowerContent = lowerContent.slice(end, lowerContent.length)
                     lastend = end
                 }
-                // resultItem.title = title.replace(keyword, "<span class='red'>" + keyword + '</span>');
+                // resultItem.title = title.replace(keyword, "<span class="red">" + keyword + '</span>');
                 result.push(resultItem)
             }
         })
@@ -303,44 +303,7 @@ if(window.isPost){
                 toc.classList.remove('toc-fixed')
                 tocToTop = getDistanceOfLeft(toc).top;
             }
-            if (tocToTop <= scrollToTop + 10) {
-                if (!toc.classList.contains('toc-fixed'))
-                    toc.classList.add('toc-fixed')
-            } else {
-                if (toc.classList.contains('toc-fixed'))
-                    toc.classList.remove('toc-fixed')
-            }
-
-            let minTop = 9999;
-            let minTopsValue = ""
-
-            for (let item of nameArray) {
-                let dom = document.getElementById(item) || document.getElementById(item.replace(/\s/g, ''))
-                if (!dom) continue
-                let toTop = getDistanceOfLeft(dom).top - scrollToTop;
-
-                if (Math.abs(toTop) < minTop) {
-                    minTop = Math.abs(toTop)
-                    minTopsValue = item
-                }
-
-                // console.log(minTopsValue, minTop)
-            }
-
-            if (minTopsValue) {
-                for (let item of result) {
-                    if (item.value.indexOf(minTopsValue) !== -1) {
-                        item.dom.classList.add("active")
-                    } else {
-                        item.dom.classList.remove("active")
-                    }
-                }
-            }
-        }
-
-        reLayout()
-
-        window.addEventListener('scroll', (e) => {
+            if (tocToTop <= scrolltotop + 10) { if (!toc.classlist.contains('toc-fixed')) toc.classlist.add('toc-fixed') } else (toc.classlist.contains('toc-fixed')) toc.classlist.remove('toc-fixed') let mintop="9999;" mintopsvalue for (let item of namearray) dom="document.getElementById(item)" || document.getelementbyid(item.replace( \s g, '')) (!dom) continue totop="getDistanceOfLeft(dom).top" - scrolltotop; (math.abs(totop) < mintop) console.log(mintopsvalue, (mintopsvalue) result) (item.value.indexof(mintopsvalue) !="=" -1) item.dom.classlist.add("active") item.dom.classlist.remove("active") relayout() window.addeventlistener('scroll', (e)> {
             reLayout()
         })
     }
@@ -365,3 +328,4 @@ if(donateButton) {
     donateImg.src = donateImg.dataset.src
 }
 
+</=></[^></[^>

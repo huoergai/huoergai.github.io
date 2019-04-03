@@ -11,7 +11,7 @@
 
     <title>
         
-        About - Hueorgai
+        ADB常用命令 - Hueorgai
         
     </title>
 
@@ -71,7 +71,7 @@
                     <span>存档</span>
                 </a>
             </li>
-            <li class="active">
+            <li>
                 <a href="/about/">
                     <i class="iconfont icon-guanyu2"></i>
                     <span>关于</span>
@@ -87,6 +87,10 @@
             
         </ul>
     </div>
+    
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#ADB常用命令"><span class="toc-text">ADB常用命令</span></a></li></ol>
+</div>
     
 </div>
 
@@ -111,17 +115,100 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-content ">
-    <blockquote>
-<p>大多数时候，都在思考自己该走向何方</p>
-</blockquote>
-<p>Mail: <a href="mailto:onlythen@yeah.net" target="_blank" rel="noopener">onlythen@yeah.net</a></p>
-<p>9月21日上午，阳光明媚，鲜花斗艳。帕洛阿尔托苹果店里欢声笑语，人头攒动。苹果公司首席执行官蒂姆·库克先生在店长欧阳猛南陪同下，不远千米，深入到一线店面，为那里的员工带去节曰的问候和良好的祝愿。<br><br>“果粉们，你们辛苦了，我代表某果公司，祝你们身体健康，生活幸福，工作成功！”库克亲切慰问广大员工和顾客，并就iOS7、iPhone 5S和iPhone 5C的销售状况进行调研。 <br><br>“您现在每月工资有多少？肾5S拿到了吗？”在店里，库克关切地向果粉们问起这一问题。当听说果粉们排到了5S，库克满意地连连点头。接着他指出，近年来苹果事业发展取得巨大成就，特别是iPhone影响剧增，老百姓对iOS满意度逐步提高，在这个转变过程中，果粉的辛勤工作功不可没。<br><br>库克看到一个中国小朋友在排队买iPhone 5S，亲切的问：“5288元一台能承受不？”小朋友回答到：“能！”当得知这位小朋友卖了一个肾来买iPhone 5S时，库克叮嘱道：“在支持苹果的同时，也要爱护身体。”<br><br>库克与购买苹果手机的果粉们兴致勃勃地参观了苹果专卖店，和员工们拉了拉家常，并饶有兴趣地玩了四盘切西瓜游戏，与普通员工同乐。<br><br>在交谈中，库克多次关心地强调：“有了iPhone 5C，就不卖iPhone 5了。”并对顾客说：“好好休息，身体是革命的本钱嘛！”会谈始终在亲切友好的气氛中进行。<br><br>顾客们就库克的讲话达成了广泛的共识，并承认世界上只有iOS最流畅，要紧紧的团结在以库克先生为首席执行官的苹果公司集体周围，一心一意抓学习，聚精会神谋发展。<br><br>帕洛阿尔托苹果专卖店当日原则通过《蒂姆·库克首席执行官在加州新苹果店的讲话纪要》，并下发各分店认真学习、研讨。</p>
-<p style="text-align:right;"><br>    —— <a href="http://www.zhihu.com/question/19687065" target="_blank" rel="noopener">李书航 － 什么是「共产中文腔调」？ </a><br></p>
-    
-    <div id="comment-container">
+
+
+<div class="post-container">
+    <div class="post-title">
+        ADB常用命令
     </div>
-    <div id="lv-container">
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2017-02-22 17:43:20</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#adb" title="adb">adb</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
+    </div>
+    <div class="post-content ">
+        <h1 id="ADB常用命令"><a href="#ADB常用命令" class="headerlink" title="ADB常用命令"></a>ADB常用命令</h1><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>adb start-server</td>
+<td>启动服务</td>
+</tr>
+<tr>
+<td>adb kill-server</td>
+<td>关闭服务</td>
+</tr>
+<tr>
+<td>adb devices</td>
+<td>显示当前连接的所有设备（如果服务没有开启会自动开启）</td>
+</tr>
+<tr>
+<td>adb install xxx.apk</td>
+<td>将应用安装进设备中</td>
+</tr>
+<tr>
+<td>adb uninstall &lt;包名&gt;</td>
+<td>卸载应用</td>
+</tr>
+<tr>
+<td>adb -s &lt;设备名&gt; &lt;命令&gt;</td>
+<td>如果有多个设备，指定某一个设备进行操作</td>
+</tr>
+<tr>
+<td>adb pull &lt;手机文件&gt; &lt;电脑文件&gt;</td>
+<td>将手机内文件导入到电脑上(文件名均为全称)</td>
+</tr>
+<tr>
+<td>adb push &lt;电脑文件&gt; &lt;手机文件&gt;</td>
+<td>将电脑中文件推送到手机上(文件名均为全称)</td>
+</tr>
+<tr>
+<td>adb shell</td>
+<td>进入手机命令行终端</td>
+</tr>
+<tr>
+<td>┗ ls</td>
+<td>查看目录列表</td>
+</tr>
+<tr>
+<td>┗ ls -l</td>
+<td>显示详细信息(权限 用户名 组名 时间 包名)</td>
+</tr>
+<tr>
+<td>┗ ps</td>
+<td>当前正在运行的进程</td>
+</tr>
+<tr>
+<td>┗ ping</td>
+<td>手机的网络连通性</td>
+</tr>
+</tbody>
+</table>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
     </div>
 </div>
 
@@ -187,7 +274,7 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
