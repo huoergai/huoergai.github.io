@@ -11,7 +11,7 @@
 
     <title>
         
-        Hueorgai
+        Fiddler真机抓包 - Hueorgai
         
     </title>
 
@@ -53,7 +53,7 @@
     </div>
     <div class="contents" id="nav-content">
         <ul>
-            <li class="active">
+            <li>
                 <a href="/">
                     <i class="iconfont icon-shouye1"></i>
                     <span>主页</span>
@@ -88,6 +88,10 @@
         </ul>
     </div>
     
+        <div id="toc" class="toc-article">
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Fiddler-真机抓包设置"><span class="toc-text">Fiddler 真机抓包设置</span></a></li></ol>
+</div>
+    
 </div>
 
 
@@ -111,82 +115,58 @@
     <div class="index-middle">
         <!-- Main Content -->
         
-<div class="post-preview-container" style="min-height: 576px">
-    
-    <div class="post-preview">
-        <div class="post-time">2019-04-02</div>
-        <div class="post-info">
-            <a href="/2019/04/02/Best Way to learn/">
-                <h3>
-                    Best Way To Learn
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#way to learn" title="way to learn">way to learn</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#The Feynman Technique" title="The Feynman Technique">The Feynman Technique</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#The Benjamin Franklin Method" title="The Benjamin Franklin Method">The Benjamin Franklin Method</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+
+<div class="post-container">
+    <div class="post-title">
+        Fiddler真机抓包
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2017-07-03</div>
-        <div class="post-info">
-            <a href="/2017/07/03/Fiddler真机抓包/">
-                <h3>
-                    Fiddler真机抓包
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#fiddler" title="fiddler">fiddler</a>
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#真机抓包" title="真机抓包">真机抓包</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
+
+    <div class="post-meta">
+        <span class="attr">发布于：<span>2017-07-03 18:16:41</span></span>
+        
+        <span class="attr">标签：/
+        
+        <a class="tag" href="/tags/#fiddler" title="fiddler">fiddler</a>
+        <span>/</span>
+        
+        <a class="tag" href="/tags/#真机抓包" title="真机抓包">真机抓包</a>
+        <span>/</span>
+        
+        
+        </span>
+        <span class="attr">访问：<span id="busuanzi_value_page_pv"></span>
+</span>
+
     </div>
-    
-    <div class="post-preview">
-        <div class="post-time">2017-02-22</div>
-        <div class="post-info">
-            <a href="/2017/02/22/ADB常用命令/">
-                <h3>
-                    ADB常用命令
-                </h3>
-            </a>
-            <p>
-                
-                <span>/</span>
-                
-                <a class="tag" href="/tags/#adb" title="adb">adb</a>
-                <span>/</span>
-                
-                
-            </p>
-        </div>
-    </div>
-    
-</div>
-<ul class="pager">
-    
-    
+    <div class="post-content ">
+        <h2 id="Fiddler-真机抓包设置"><a href="#Fiddler-真机抓包设置" class="headerlink" title="Fiddler 真机抓包设置"></a>Fiddler 真机抓包设置</h2><p><strong>1. </strong> Fiddler 下载安装<br><strong>2. </strong> 电脑和真机连接在同一局域网<br><strong>3. </strong> Fiddler设置  </p>
+<ul>
+<li>开启Fiddler的远程连接: Fiddler 主菜单 Tools -&gt; Fiddler Options…-&gt; Connections页签，选中Allowremote computers to connect。如下图：<img src="/img/fiddler/fiddler_img01.png" alt="f01"> <img src="/img/fiddler/fiddler_img02.png" alt="f02"> </li>
+<li>重启Fiddler  </li>
 </ul>
+<p><strong>4. </strong> 真机设置  </p>
+<ul>
+<li>获取电脑ip</li>
+<li>真机：设置–&gt;wlan–&gt;所连接的网络–&gt;长按–&gt;修改网络–&gt;按下图配置： <img src="/img/fiddler/fiddler_img03.png" alt="f03"> </li>
+<li>完成 </li>
+</ul>
+<p><strong>5. </strong> 添加过滤器，抓取指定IP</p>
+<ul>
+<li>如图：<img src="/img/fiddler/fiddler_img04.png" alt="f04"></li>
+</ul>
+
+        
+        <br>
+        <div id="comment-container">
+        </div>
+        <div id="disqus_thread"></div>
+
+        <div id="lv-container">
+        </div>
+
+    </div>
+</div>
 
     </div>
 </div>
@@ -250,12 +230,31 @@
     // We expose some of the variables needed by the front end
     window.hexo_search_path = "search.json"
     window.hexo_root = "/"
-    window.isPost = false
+    window.isPost = true
 </script>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
 <script src="/js/index.js"></script>
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
+
+    <script>
+        /**
+         *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+         *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+        */
+        if( '' || '')
+        var disqus_config = function () {
+            this.page.url = '';  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = ''; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+        };
+
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://huoergai.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
 
 
 
