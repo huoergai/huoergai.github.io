@@ -4,7 +4,6 @@ date: 2021-07-12 22:06
 tags: 
     - Jetpack Compose
 ---
-
 # Jetpack compose
 
 This is my study notes about *Jetpack Compose by Tutorials FIRST EDITION* by raywenderlich.
@@ -259,7 +258,31 @@ val scrollState = rememberScrollState()
 ##### Creating list with LazyColumn & LazyRow
 
 ```kotlin
-@Composablefun LazyColumn(    modifier: Modifier = Modifier,    state: LazyListState = rememberLazyListState(),    contentPadding: PaddingValues = PaddingValues(0.dp),    reverseLayout: Boolean = false,    verticalArrangement: Arrangement.Vertical =        if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,    horizontalAlignment: Alignment.Horizontal = Alignment.Start,    flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),    content: LazyListScope.() -> Unit)@Composablefun LazyRow(    modifier: Modifier = Modifier,    state: LazyListState = rememberLazyListState(),    contentPadding: PaddingValues = PaddingValues(0.dp),    reverseLayout: Boolean = false,    horizontalArrangement: Arrangement.Horizontal =        if (!reverseLayout) Arrangement.Start else Arrangement.End,    verticalAlignment: Alignment.Vertical = Alignment.Top,    flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),    content: LazyListScope.() -> Unit)
+@Composable
+fun LazyColumn(
+    modifier: Modifier = Modifier,
+    state: LazyListState = rememberLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+    reverseLayout: Boolean = false,
+    verticalArrangement: Arrangement.Vertical =
+        if (!reverseLayout) Arrangement.Top else Arrangement.Bottom,
+    horizontalAlignment: Alignment.Horizontal = Alignment.Start,
+    flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
+    content: LazyListScope.() -> Unit
+)
+
+@Composable
+fun LazyRow(
+    modifier: Modifier = Modifier,
+    state: LazyListState = rememberLazyListState(),
+    contentPadding: PaddingValues = PaddingValues(0.dp),
+    reverseLayout: Boolean = false,
+    horizontalArrangement: Arrangement.Horizontal =
+        if (!reverseLayout) Arrangement.Start else Arrangement.End,
+    verticalAlignment: Alignment.Vertical = Alignment.Top,
+    flingBehavior: FlingBehavior = ScrollableDefaults.flingBehavior(),
+    content: LazyListScope.() -> Unit
+)
 ```
 
 #### Grids in Compose
@@ -367,7 +390,12 @@ ConstraintLayout arranges elements **relative to one another**.
 
 
 ```kotlin
-@Composableinline fun ConstraintLayout(    modifier: Modifier = Modifier,    optimizationLevel: Int = Optimizer.OPTIMIZATION_STANDARD,    crossinline content: @Composable ConstraintLayoutScope.() -> Unit)
+@Composable
+inline fun ConstraintLayout(
+    modifier: Modifier = Modifier,
+    optimizationLevel: Int = Optimizer.OPTIMIZATION_STANDARD,
+    crossinline content: @Composable ConstraintLayoutScope.() -> Unit
+)
 ```
 
 **Note:** To use ConstraintLayout modifiers in referenced composables, pass ConstraintLayoutScope as a parameter.
@@ -386,7 +414,9 @@ Two way to set guideline offset:
 - Give **screen percentage**.
 
 ```kotlin
-val startVerticalGuideline = createGuidelineFromStart(0.2f)val absoluteVerticalGuideline = createGuidelineFromAbsoluteLeft(20.dp)...
+val startVerticalGuideline = createGuidelineFromStart(0.2f)
+val absoluteVerticalGuideline = createGuidelineFromAbsoluteLeft(20.dp)
+...
 ```
 
 **Barriers**
@@ -448,7 +478,13 @@ Effects can help by giving control over when the code executes.
 > SideEffect() ensures event only executes when a composition is successful. Use it when you want event to run with every recomposition.
 
 ```kotlin
-@Composablefun MainScreen(router: Router){  val drawerState = rememberDrawerState(DrawerValue.Closed)  SideEffect {    router.isRoutingEnabled = drawerState.Closed  }}
+@Composable
+fun MainScreen(router: Router){
+  val drawerState = rememberDrawerState(DrawerValue.Closed)
+  SideEffect {
+    router.isRoutingEnabled = drawerState.Closed
+  }
+}
 ```
 
 #### LaunchEffect
@@ -456,7 +492,14 @@ Effects can help by giving control over when the code executes.
 > LauchedEffect launches a coroutine into the composition's CoroutimeScope. Just like rememberCoroutineScope(), its coroutines is canceled when LaunchedEffect leaves the composition and will relaunch on recomposition.
 
 ```kotlin
-@Composablefun SpeakerList(searchText: String) {  var communites by remember {mutableStateOf(emptyList<String>())}  LaunchedEffect(searchText){    communities = viewModel.searchCommunities(searchText)  }  Communities(comunities)}
+@Composable
+fun SpeakerList(searchText: String) {  
+    var communites by remember {mutableStateOf(emptyList<String>())}  
+    LaunchedEffect(searchText){    
+        communities = viewModel.searchCommunities(searchText)  
+    }  
+    Communities(comunities)
+}
 ```
 
 - LaunchedEffect initiates the first time it enters the composition and every time the parameter changes. It cancels all running Jobs during the parameter change or upon leaving the composition.
@@ -464,8 +507,6 @@ Effects can help by giving control over when the code executes.
 **RememberUpdatedState()**
 
 > remember a mutableStateOf and update its value to newValue on each recomposition of the rememberUpdatedState call.
->
-> 
 
 #### produceState
 
@@ -478,7 +519,11 @@ Effects can help by giving control over when the code executes.
 > The returned State conflates values; no change will be observable if ProduceStateScope.value is used to set a value that is equal to its old value, and observers may only see the lastest value if several values are set in rapid succession.
 
 ```kotlin
-@Composablefun <T> produceState(    initialValue: T,    @BuilderInference producer: suspend ProduceStateScope<T>.() -> Unit): State<T>
+@Composable
+fun <T> produceState(
+    initialValue: T,
+    @BuilderInference producer: suspend ProduceStateScope<T>.() -> Unit
+): State<T>
 ```
 
 
@@ -490,19 +535,38 @@ Effects can help by giving control over when the code executes.
 Replace onActive() without subject parameter by using LaunchedEffect with a constant value like  Unit or true.
 
 ```kotlin
-onActive {  someFunction()}// ==>LaunchedEffect(Unit){  someFunction()}
+onActive {
+  someFunction()
+}
+
+// ==>
+LaunchedEffect(Unit){
+  someFunction()
+}
 ```
 
 If onActive() with subject parameter, replace it with LaunchedEffect.
 
 ``` kotlin
-onActive(parameter) {  someFunction()}// ==>LaunchedEffect(parameter) {  someFunction()}
+onActive(parameter) {
+  someFunction()
+}
+// ==>
+LaunchedEffect(parameter) {
+  someFunction()
+}
 ```
 
 Replace onCommit() without a subject parameter by using SideEffect with a constant value like Unit or true.
 
 ```kotlin
-onCommit() {  someFunction()}// ==>SideEffect {  someFunction()}
+onCommit() {
+  someFunction()
+}
+// ==>
+SideEffect {
+  someFunction()
+}
 ```
 
 #### Key points
@@ -544,11 +608,22 @@ onCommit() {  someFunction()}// ==>SideEffect {  someFunction()}
 - 在代码中通过 ID 获取到对应的 **ComposeView** 后，通过 setContent() 填充进 Composable 即可。
 
 ```xml
- <androidx.compose.ui.platform.ComposeView      android:id="@+id/composeButton"      android:layout_width="wrap_content"      android:layout_height="48dp"      android:layout_marginTop="16dp"      app:layout_constraintEnd_toEndOf="parent"      app:layout_constraintStart_toStartOf="parent"      app:layout_constraintTop_toBottomOf="@+id/subtitle" />
+ <androidx.compose.ui.platform.ComposeView
+      android:id="@+id/composeButton"
+      android:layout_width="wrap_content"
+      android:layout_height="48dp"
+      android:layout_marginTop="16dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/subtitle" />
 ```
 
 ```kotlin
-binding.composeButton.setContent {  MaterialTheme {    ComposeButton { showToast() }  }}
+binding.composeButton.setContent {
+  MaterialTheme {
+    ComposeButton { showToast() }
+  }
+}
 ```
 
 #### 在 Compose 中加入 传统 View
@@ -557,5 +632,14 @@ binding.composeButton.setContent {  MaterialTheme {    ComposeButton { showToast
 - 通过在 **AndroidView** 中的 **factory**  参数中传入传统 View 对象实现。
 
 ```kotlin
-@Composableprivate fun TrendingTopic(trendingTopic: TrendTopicModel) {  AndroidView({ context ->    // TrendingTopicView 是一个自定义 View，其中通过 inflate 加载 XML 布局。    TrendingTopicView(context).apply {      text = trendingTopic.text      image = trendingTopic.imageRes    }  })}
+@Composable
+private fun TrendingTopic(trendingTopic: TrendTopicModel) {
+  AndroidView({ context ->
+    // TrendingTopicView 是一个自定义 View，其中通过 inflate 加载 XML 布局。
+    TrendingTopicView(context).apply {
+      text = trendingTopic.text
+      image = trendingTopic.imageRes
+    }
+  })
+}
 ```

@@ -131,4 +131,3 @@ Compose function 可以并行执行，即一个 Compose function 中的多个 Co
 > A composable function might run for every frame of a UI animation. If the function expensive operations, the function can cause UI jank.
 >
 > If composable function needs data, it should define parameters for the data.
-
