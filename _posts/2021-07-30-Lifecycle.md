@@ -1,7 +1,7 @@
 ---
 title: Lifecycle of Composables
 date: 2021-07-30 21:01
-tagx: 
+tags: 
      - Jetpack Compose Foundation
 ---
 

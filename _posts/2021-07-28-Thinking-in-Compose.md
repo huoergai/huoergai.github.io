@@ -2,7 +2,7 @@
 title: Thinking in Compose
 date: 2021-07-28 22:25
 tags: 
-    - Jetpack Compose
+    - Jetpack Compose Foundation
 ---
 
 # Thinking in Compose
