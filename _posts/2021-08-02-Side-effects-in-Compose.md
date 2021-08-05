@@ -5,8 +5,6 @@ tags:
     - Jetpack Compose Foundation
 ---
 
-# Side-effects in Compose
-
 Learn about the different side-effect APIs Jetpack Compose offers.
 
 > Composables **should be side-effect free**.

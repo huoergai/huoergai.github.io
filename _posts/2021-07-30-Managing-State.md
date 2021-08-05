@@ -5,8 +5,6 @@ tags:
     - Jetpack Compose Foundation
 ---
 
-# Managing State
-
 > **State** in an app is any value that can change over time. Encompasses from Room database to a variable on a class.
 
 ## State and composition

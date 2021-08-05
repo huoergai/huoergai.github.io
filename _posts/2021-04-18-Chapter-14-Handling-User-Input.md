@@ -5,8 +5,6 @@ tags:
     - Linux Command Line and Shell Scripting Bible, 3E
 ---
 
-# Chapter-14 Handling User Input
-
 ```shell
 #!/bin/bash
 

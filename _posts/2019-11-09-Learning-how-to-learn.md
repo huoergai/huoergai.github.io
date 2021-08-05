@@ -4,7 +4,6 @@ date: 2019-11-09 22:09:17
 tags: 
      - learn
 ---
-# Learning how to learn
 
 ## Week-1
 

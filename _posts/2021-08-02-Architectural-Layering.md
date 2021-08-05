@@ -5,8 +5,6 @@ tags:
     - Jetpack Compose Foundation
 ---
 
-# Architectural Layering
-
 This page provide a high-level overview of the architectural layers that make up Jetpack Compose, and core principles that inform this design.
 
 Jetpack Compose is not a single monolithic project; it is created from a number of modules which are assembled together to form a complete stack. Understanding the different modules that make up Jetpack Compose enable you to:

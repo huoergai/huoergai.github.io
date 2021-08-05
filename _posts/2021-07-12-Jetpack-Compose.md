@@ -4,7 +4,6 @@ date: 2021-07-12 22:06
 tags: 
     - Jetpack Compose
 ---
-# Jetpack compose
 
 This is my study notes about *Jetpack Compose by Tutorials FIRST EDITION* by raywenderlich.
 

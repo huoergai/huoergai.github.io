@@ -5,8 +5,6 @@ tags:
     - Linux Command Line and Shell Scripting Bible, 3E
 ---
 
-# Chapter-13 More Structured Commands
-
 ```shell
 #!/bin/bash
 # chapter-13 more structural command

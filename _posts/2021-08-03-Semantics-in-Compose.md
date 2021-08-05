@@ -5,8 +5,6 @@ tags:
   - Jetpack Compose Foundation
 ---
 
-# Semantics in Compose
-
 > A Composition **describes the UI** of your app and is produced by running composables.
 >
 > The Composition is a tree-structure that consist of the composables that describe your UI.

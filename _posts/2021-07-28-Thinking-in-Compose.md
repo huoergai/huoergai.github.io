@@ -5,8 +5,6 @@ tags:
     - Jetpack Compose Foundation
 ---
 
-# Thinking in Compose
-
 This is my study notes about **Jetpack Compose's** official doc, the original reference is [Thinking in Compose](https://developer.android.com/jetpack/compose/mental-model)
 
 > Jetpack Compose is a modern **declarative UI** Toolkit for Android.

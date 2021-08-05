@@ -5,8 +5,6 @@ tags:
      - Jetpack Compose Foundation
 ---
 
-# Lifecycle of Composables
-
 > Learn about the lifecycle of a composable and how Composable decides whether a composable needs recomposition.
 
 ## Lifecycle overview

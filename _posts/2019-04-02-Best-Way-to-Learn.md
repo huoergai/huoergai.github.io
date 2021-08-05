@@ -5,8 +5,6 @@ tags:
      - learn
 ---
 
-# Best Way To Learn #
-
 > If you're not learning, you're standing still.
 
 ## The Feynman Technique:The Best Way to learn Anything ##

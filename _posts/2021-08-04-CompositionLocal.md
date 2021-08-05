@@ -5,8 +5,6 @@ tags:
   - Jetpack Compose Foundation
 ---
 
-# Locally scoped data with CompositionLocal
-
 > **CompositionLocal** is tool for passing data down through the Composition implicitly.
 
 ## Introducing CompositionLocal

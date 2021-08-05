@@ -5,8 +5,6 @@ tags:
      - design
 ---
 
-# Design Checklist
-
 From Ali Spittel: [A Web Design Crash Course: From one non-designer to another](https://dev.to/aspittel/a-web-design-crash-course-from-one-non-designer-to-another-2o2m)
 
 ## Color

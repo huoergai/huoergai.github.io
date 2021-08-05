@@ -5,8 +5,6 @@ tags:
     - Linux Command Line and Shell Scripting Bible, 3E
 ---
 
-# Chapter-12 Using Structured Commands
-
 ```shell
 # chapter 12 structured command
 

@@ -6,8 +6,6 @@ tags:
      - SystemUI
 ---
 
-# Android Status Bar and Navigation Bar Control
-
 本次修改基于 Android 9.0。
 
 ## What?
