@@ -195,22 +195,19 @@ tags:
   
   echo "-------- Start --------"
   build_all
-  echo "-------- End --------"
+  echo "--------- End ---------"
   ```
 
   编译成功后会在 FFmpeg 目录下生成 android-build 目录，其中的 libs 目录为 so 库输出，includes 为头文件输出。导入项目时，将这两个目录引入即可。
 
-  
 
   ## 集成
 
   
-
   ![ffpeg](/assets/img/sysdev/ffmpeg_0.png)
 
 ​		CMakeLists.txt 文件内容
 
-​		 
 
 ```cmake
 # For more information about using CMake with Android Studio, read the
