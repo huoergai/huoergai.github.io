@@ -21,7 +21,7 @@ sourceSets {
 
 解决办法就是，不在 gradle 中指定并放在 jinLibs 之外的地方，推荐 main/cpp/lib 目录。
 
-![so 位置](load so.png)
+![so 位置](/assets/img/sysdev/load_so.png)
 
 在 CMakeLists.txt 中添加、链接 so 库。
 
